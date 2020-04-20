@@ -1,0 +1,39 @@
+/* Hero block */
+
+.block.hero {
+  .hero-image {
+    flex: 1 1;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: @largestMobileScreen) {
+  .block.hero {
+    overflow: hidden;
+    .block-inner-wrapper {
+      flex-direction: column;
+    }
+    .hero-image {
+      max-width: 100%;
+    }
+  }
+}
+
+/* Image block */
+
+.block.image {
+  &.center {
+    picture {
+      display: flex;
+      img {
+        flex: 1 1;
+      }
+    }
+  }
+  img {
+    object-fit: cover;
+  }
+}
